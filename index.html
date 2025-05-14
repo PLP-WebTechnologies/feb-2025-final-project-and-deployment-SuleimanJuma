@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your Favorite Online Store</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <p>Free shipping on orders over $50</p>
+                <div class="top-links">
+                    <a href="#help-center">Help</a>
+                    <a href="#">Track Order</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>ShopEase</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products..." id="search-input">
+                    <button><i class="fas fa-search"></i></button>
+                    <div class="search-suggestions" id="search-suggestions"></div>
+                </div>
+                <div class="header-icons">
+                    <a href="#" id="wishlist-btn"><i class="far fa-heart"></i><span class="count">0</span></a>
+                    <a href="cart.html" id="cart-btn"><i class="fas fa-shopping-cart"></i><span class="count">0</span></a>
+                    <a href="#" id="user-btn"><i class="far fa-user"></i></a>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-column">
+                            <h4>Clothing</h4>
+                            <a href="#">Men's Wear</a>
+                            <a href="#">Women's Wear</a>
+                            <a href="#">Kids' Wear</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>Electronics</h4>
+                            <a href="#">Phones</a>
+                            <a href="#">Laptops</a>
+                            <a href="#">Accessories</a>
+                            <a href="#">Televisions</a>
+                            <a href="#">Fridges</a>
+                            <a href="#">Home Audio systems</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>Home & Living</h4>
+                            <a href="#">Furniture</a>
+                            <a href="#">Decor</a>
+                            <a href="#">Kitchen</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">New Arrivals <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Stylish Summer Dress</a>
+                        <a href="#">Wireless Earbuds</a>
+                        <a href="#">Modern Sofa Set</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Deals <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">50% off on Smartphones</a>
+                        <a href="#">Buy 1 Get 1 Free on Shoes</a>
+                        <a href="#">20% off on Kitchen Appliances</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Brands <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Apple</a>
+                        <a href="#">Samsung</a>
+                        <a href="#">Nike</a>
+                        <a href="#">Adidas</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="image/seasonal_sale_banner.svg" alt="Seasonal Sale" class="hero-image">
+                <div class="slide-content">
+                    <h2 style="margin-bottom: 1rem;">Seasonal Collection</h2>
+                    <p style="margin-bottom: 1.5rem;">Up to 50% off on selected items</p>
+                    <a href="#" class="btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/ecommerce_banner.svg" alt="New Arrivals" class="hero-image">
+                <div class="slide-content">
+                    <a href="#" class="btn">Explore</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/tech_week_banner.svg" alt="Tech Week" class="hero-image">
+                <div class="slide-content">
+                    <h2>Tech Week</h2>
+                    <p>Best deals on electronics</p>
+                    <a href="#" class="btn">Browse Deals</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots"></div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="image/men's clothing.png" alt="Men's Fashion">
+                    <div class="category-overlay">
+                        <h3>Men's Fashion</h3>
+                        <a href="#" class="btn btn-outline">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="image/women's clothing.png" alt="Women's Fashion">
+                    <div class="category-overlay">
+                        <h3>Women's Fashion</h3>
+                        <a href="#" class="btn btn-outline">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="image/household applainces.jpg" alt="Electronics">
+                    <div class="category-overlay">
+                        <h3>Electronics</h3>
+                        <a href="#" class="btn btn-outline">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="image/household furniture.jpg" alt="Home & Living">
+                    <div class="category-overlay">
+                        <h3>Home & Living</h3>
+                        <a href="#" class="btn btn-outline">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2 class="section-title">Featured Products</h2>
+                <a href="products.html" class="view-all">View All</a>
+            </div>
+            <div class="products-grid">
+                <!-- Product cards will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Limited Time Offer</h2>
+                <p>Get 30% off on all orders over KSH 13,000. Use code: SHOP30</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get the latest updates on new products and upcoming sales</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Center -->
+    <section id="help-center" class="help-center">
+        <div class="container">
+            <h2>Help Center</h2>
+            <p>Welcome to the ShopEase Help Center. Here you can find answers to common questions and get support for your shopping experience.</p>
+            
+            <div class="help-section">
+                <h3>Contacts and Support</h3>
+                <p>If you need assistance, feel free to reach out to us:</p>
+                <ul>
+                    <li>Email: <a href="mailto:support@shopease.com">support@shopease.com</a></li>
+                    <li>Phone: +254 775567 890</li>
+                    <li>Live Chat: Available 24/7 on our website</li>
+                </ul>
+            </div>
+
+            <div class="help-section">
+                <h3>Payment and Account</h3>
+                <p>Manage your account and payment options:</p>
+                <ul>
+                    <li>Update your account details in the <a href="#">Account Settings</a> section.</li>
+                    <li>We accept Visa, Mastercard, PayPal, and Apple Pay.</li>
+                    <li>For payment issues, contact our support team.</li>
+                </ul>
+            </div>
+
+            <div class="help-section">
+                <h3>Orders and Delivery</h3>
+                <p>Track your orders and learn about delivery options:</p>
+                <ul>
+                    <li>Standard delivery takes 3-5 business days for KSH 500.</li>
+                    <li>Express delivery is available for an additional fee of KSH 1,000.</li>
+                </ul>
+            </div>
+
+            <div class="help-section">
+                <h3>Returns and Refunds</h3>
+                <p>Learn about our return and refund policies:</p>
+                <ul>
+                    <li>Items can be returned within 30 days of delivery.</li>
+                    <li>Refunds are processed within 5-7 business days after receiving the returned item.</li>
+                    <li>Visit the <a href="javascript:void(0);" onclick="openModal('returns-modal')">Returns and Refunds</a> page for more details.</li>
+                </ul>
+            </div>
+
+            <div class="help-section">
+                <h3>Terms and Conditions</h3>
+                <p>Understand our terms and conditions:</p>
+                <ul>
+                    <li>By using our website, you agree to our <a href="javascript:void(0);" onclick="openModal('terms-modal')">Terms and Conditions</a>.</li>
+                    <li>All purchases are subject to our policies.</li>
+                    <li>For legal inquiries, contact <a href="mailto:legal@shopease.com">legal@shopease.com</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Returns and Refunds Section -->
+    <section id="returns-section">
+        <button id="returns-btn" class="btn">Returns and Refunds</button>
+        <div id="returns-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Returns and Refunds</h2>
+                <p>If you are not satisfied with your purchase, you can return the item within 30 days of delivery. Refunds will be processed within 5-7 business days after receiving the returned item. For more details, contact our support team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms and Conditions Section -->
+    <section id="terms-section">
+        <button id="terms-btn" class="btn">Terms and Conditions</button>
+        <div id="terms-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Terms and Conditions</h2>
+                <p>By using our website, you agree to our terms and conditions. All purchases are subject to our policies. For legal inquiries, contact legal@shopease.com.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>ShopEase</h4>
+                    <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Postal Code: 00515 Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone"></i> +254 775567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@shopease.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+     <script src="cart.js"></script>
+</body>
+</html>

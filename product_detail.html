@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name - ShopEase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Reuse header and navigation from index.html -->
+    
+    <main class="product-detail-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / 
+                <a href="products.html">Products</a> / 
+                <span>Product Name</span>
+            </div>
+            
+            <div class="product-detail-container">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="images/product1-large.jpg" alt="Product Name" id="main-product-image">
+                        <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                    <div class="thumbnail-images">
+                        <div class="thumbnail active">
+                            <img src="images/product1-thumb1.jpg" alt="Product Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/product1-thumb2.jpg" alt="Product Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/product1-thumb3.jpg" alt="Product Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/product1-thumb4.jpg" alt="Product Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/product1-thumb5.jpg" alt="Product Thumbnail">
+                        </div>
+                    </div>
+                    <button class="view-360-btn"><i class="fas fa-sync-alt"></i> View in 360°</button>
+                </div>
+                
+                <div class="product-info">
+                    <h1>Premium Wireless Headphones</h1>
+                    <div class="product-meta">
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <a href="#reviews" class="review-count">142 Reviews</a>
+                        </div>
+                        <div class="sku">SKU: HD12345</div>
+                        <div class="availability in-stock">In Stock</div>
+                    </div>
+                    
+                    <div class="price">
+                        <span class="current-price">$199.99</span>
+                        <span class="original-price">$249.99</span>
+                        <span class="discount">20% OFF</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>Experience premium sound quality with our latest wireless headphones. Featuring noise cancellation, 30-hour battery life, and comfortable over-ear design for extended listening sessions.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Active Noise Cancellation</li>
+                            <li><i class="fas fa-check"></i> 30-hour Battery Life</li>
+                            <li><i class="fas fa-check"></i> Built-in Microphone</li>
+                            <li><i class="fas fa-check"></i> Bluetooth 5.0</li>
+                            <li><i class="fas fa-check"></i> Foldable Design</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="option">
+                            <label>Color:</label>
+                            <div class="color-options">
+                                <input type="radio" name="color" id="color-black" checked>
+                                <label for="color-black" style="background-color: #000;" title="Black"></label>
+                                
+                                <input type="radio" name="color" id="color-blue">
+                                <label for="color-blue" style="background-color: #0066cc;" title="Blue"></label>
+                                
+                                <input type="radio" name="color" id="color-red">
+                                <label for="color-red" style="background-color: #cc0000;" title="Red"></label>
+                            </div>
+                        </div>
+                        
+                        <div class="option">
+                            <label for="size">Size:</label>
+                            <select id="size">
+                                <option value="">Select Size</option>
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn btn-outline add-to-wishlist"><i class="far fa-heart"></i> Wishlist</button>
+                    </div>
+                    
+                    <div class="product-meta-bottom">
+                        <div class="meta-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free shipping on orders over $50</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day return policy</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>2-year warranty</span>
+                        </div>
+                    </div>
+                    
+                    <div class="share-product">
+                        <span>Share:</span>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-tabs">
+                <ul class="tabs-nav">
+                    <li class="active" data-tab="description">Description</li>
+                    <li data-tab="specifications">Specifications</li>
+                    <li data-tab="reviews">Reviews</li>
+                    <li data-tab="shipping">Shipping & Returns</li>
+                </ul>
+                
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>Product Description</h3>
+                        <p>Our Premium Wireless Headphones deliver an unparalleled audio experience with advanced noise cancellation technology that blocks out external noise, allowing you to immerse yourself in your music.</p>
+                        <p>The headphones feature plush ear cushions and an adjustable headband for all-day comfort. With Bluetooth 5.0 technology, you can enjoy a stable wireless connection up to 30 feet from your device.</p>
+                        <p>The built-in microphone with voice assistant compatibility allows for hands-free calls and voice commands. The foldable design makes them perfect for travel, and the included carrying case provides extra protection.</p>
+                    </div>
+                    
+                    <div class="tab-pane" id="specifications">
+                        <h3>Technical Specifications</h3>
+                        <table class="specs-table">
+                            <tr>
+                                <td>Brand</td>
+                                <td>AudioPro</td>
+                            </tr>
+                            <tr>
+                                <td>Model</td>
+                                <td>WH-2023</td>
+                            </tr>
+                            <tr>
+                                <td>Connectivity</td>
+                                <td>Bluetooth 5.0, 3.5mm audio jack</td>
+                            </tr>
+                            <tr>
+                                <td>Battery Life</td>
+                                <td>Up to 30 hours (ANC on), 40 hours (ANC off)</td>
+                            </tr>
+                            <tr>
+                                <td>Charging Time</td>
+                                <td>2 hours (full charge)</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>254g</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2 years</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews">
+                        <h3>Customer Reviews</h3>
+                        <div class="reviews-summary">
+                            <div class="average-rating">
+                                <div class="average">4.7</div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="total-reviews">Based on 142 reviews</div>
+                            </div>
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <span>5 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 75%;"></div>
+                                    </div>
+                                    <span>75%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>4 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 15%;"></div>
+                                    </div>
+                                    <span>15%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>3 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 7%;"></div>
+                                    </div>
+                                    <span>7%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>2 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 2%;"></div>
+                                    </div>
+                                    <span>2%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>1 star</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 1%;"></div>
+                                    </div>
+                                    <span>1%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="write-review">
+                            <h4>Write a Review</h4>
+                            <form class="review-form">
+                                <div class="form-group">
+                                    <label>Rating</label>
+                                    <div class="rating-input">
+                                        <input type="radio" name="rating" id="rating5" value="5">
+                                        <label for="rating5"><i class="fas fa-star"></i></label>
+                                        <input type="radio" name="rating" id="rating4" value="4">
+                                        <label for="rating4"><i class="fas fa-star"></i></label>
+                                        <input type="radio" name="rating" id="rating3" value="3">
+                                        <label for="rating3"><i class="fas fa-star"></i></label>
+                                        <input type="radio" name="rating" id="rating2" value="2">
+                                        <label for="rating2"><i class="fas fa-star"></i></label>
+                                        <input type="radio" name="rating" id="rating1" value="1">
+                                        <label for="rating1"><i class="fas fa-star"></i></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-title">Review Title</label>
+                                    <input type="text" id="review-title" placeholder="Summarize your review">
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-text">Your Review</label>
+                                    <textarea id="review-text" placeholder="What did you like or dislike about this product?"></textarea>
+                                </div>
+                                <button type="submit" class="btn">Submit Review</button>
+                            </form>
+                        </div>
+                        
+                        <div class="customer-reviews">
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="review-author">John D.</div>
+                                    <div class="review-date">October 15, 2023</div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <h5 class="review-title">Excellent sound quality</h5>
+                                <p class="review-text">These headphones are amazing! The sound quality is crisp and clear, and the noise cancellation works perfectly. I can wear them for hours without any discomfort. Highly recommend!</p>
+                            </div>
+                            
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="review-author">Sarah M.</div>
+                                    <div class="review-date">September 28, 2023</div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <h5 class="review-title">Great but battery could be better</h5>
+                                <p class="review-text">I love these headphones overall. The sound is fantastic and they're very comfortable. My only complaint is that the battery life isn't quite as long as advertised when using noise cancellation at full power.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="shipping">
+                        <h3>Shipping Information</h3>
+                        <p>We offer free standard shipping on all orders over $50. Standard shipping typically takes 3-5 business days. Expedited shipping options are available at checkout.</p>
+                        
+                        <h3>Return Policy</h3>
+                        <p>If you're not completely satisfied with your purchase, you may return it within 30 days of delivery for a full refund or exchange. Items must be in their original condition with all tags attached.</p>
+                        
+                        <h3>International Shipping</h3>
+                        <p>We ship to most countries worldwide. International shipping rates and delivery times vary by destination. Customs duties and taxes may apply and are the responsibility of the recipient.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="related-products">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="products-grid">
+                    <!-- Related products will be loaded via JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>ShopEase</h4>
+                <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+                    <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                    <li><i class="fas fa-envelope"></i> info@shopease.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ShopEase. All Rights Reserved.</p>
+            <div class="payment-methods">
+                <img src="images/visa.png" alt="Visa">
+                <img src="images/mastercard.png" alt="Mastercard">
+                <img src="images/paypal.png" alt="PayPal">
+                <img src="images/apple-pay.png" alt="Apple Pay">
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

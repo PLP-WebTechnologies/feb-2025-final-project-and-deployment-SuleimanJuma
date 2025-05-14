@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShopEase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    
+    <main class="cart-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Shopping Cart</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> / <span>Cart</span>
+                </div>
+            </div>
+            
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <div class="header-item product">Product</div>
+                        <div class="header-item price">Price</div>
+                        <div class="header-item quantity">Quantity</div>
+                        <div class="header-item total">Total</div>
+                        <div class="header-item remove"></div>
+                    </div>
+                    
+                    <!-- Cart items will be populated by JavaScript -->
+                </div>
+                <div class="cart-summary">
+                    <h2>Cart Summary</h2>
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">KSH 90,999.61</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping:</span>
+                        <span id="cart-shipping">KSH 2,600.00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total:</span>
+                        <span id="cart-total">KSH 93,599.61</span>
+                    </div>
+                    <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>ShopEase</h4>
+                    <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Postal Code: 00515 Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone"></i> +254 775567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@shopease.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>   
+    <script src="js/mockData.js" type="module"></script>
+    <script>
+        import { mockProducts } from './js/mockData.js';
+
+        const cartContainer = document.querySelector('.cart-items');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Load cart items
+        cart.forEach(item => {
+            const product = mockProducts.find(p => p.id === item.productId);
+            if (product) {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <div class="cart-item-product">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <input type="number" value="${item.quantity}" min="1" data-id="${item.productId}">
+                    </div>
+                    <div class="cart-item-price">KSH ${(product.price * item.quantity).toLocaleString()}</div>
+                    <button class="remove-item" data-id="${item.productId}">Remove</button>
+                `;
+                cartContainer.appendChild(cartItem);
+            }
+        });
+
+        // Update cart quantities
+        document.addEventListener('change', (e) => {
+            if (e.target.type === 'number') {
+                const productId = parseInt(e.target.getAttribute('data-id'));
+                const newQuantity = parseInt(e.target.value);
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const item = cart.find(item => item.productId === productId);
+
+                if (item) {
+                    item.quantity = newQuantity;
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    location.reload();
+                }
+            }
+        });
+
+        // Remove item from cart
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('remove-item')) {
+                const productId = parseInt(e.target.getAttribute('data-id'));
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart = cart.filter(item => item.productId !== productId);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                location.reload();
+            }
+        });
+    </script>
+</body>
+
+</html>
