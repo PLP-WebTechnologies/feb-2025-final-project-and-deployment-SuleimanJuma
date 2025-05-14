@@ -16,10 +16,6 @@ A modern, feature-rich e-commerce platform built with HTML, CSS, and JavaScript,
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm (v6 or higher)
 
 ### Installation
 
